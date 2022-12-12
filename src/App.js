@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App">
       {" "}
-      <h1> Weather App</h1>
+      <h1> Weather App Test</h1>
       <footer>
         This project was coded by Shanay Hazell and is {""}
         <a href="https://github.com/ShanayH/react-weather-app" target="_blank">
