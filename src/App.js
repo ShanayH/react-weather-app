@@ -2,12 +2,12 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <div className="container">
-        <div className="body">
+    <body>
+      <div className="App">
+        <div className="container">
           <h1> Weather App </h1>
-          
         </div>
+
         <footer>
           This project was coded by Shanay Hazell and is {""}
           <a
@@ -20,7 +20,7 @@ function App() {
           {/* later you can add a src to your personal page as well */}
         </footer>
       </div>
-    </div>
+    </body>
   );
 }
 
