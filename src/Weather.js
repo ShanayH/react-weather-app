@@ -58,7 +58,7 @@ export default function Weather() {
             </li>
           </ul>
         </div>
-        <div class="col-6 weather-info">
+        <div className="col-6 weather-info">
           <ul>
             <li>Precipitation: 15%</li>
             <li>Humidity 30%</li>
