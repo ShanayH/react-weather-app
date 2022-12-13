@@ -3,7 +3,7 @@
   border-radius: 15px;
   max-width: 600px;
   padding: 30px;
-  margin: 100px;
+  margin: 100px 100px 0px 100px;
   color: rgb(135, 135, 135);
   background: #f9f0f4;
 }
@@ -16,8 +16,8 @@
 
 .Weather .temp-result {
   font-weight: bold;
-  margin-left: 15px;
-  font-size: 2rem;
+  margin-left: 10px;
+  font-size: 3rem;
   color: black;
 }
 
@@ -32,6 +32,7 @@
 
 .Weather ul {
   list-style: none;
+  padding-left:5px;
 }
 
 .Weather .date-time {
@@ -41,4 +42,12 @@
 
 .Weather .weather-info {
   line-height: 22px;
+}
+
+.Weather form {
+    margin:7px;
+}
+
+.Weather img {
+    vertical-align: top;
 }

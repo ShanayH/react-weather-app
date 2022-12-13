@@ -33,7 +33,7 @@ export default function Weather() {
               <img
                 src="http://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/sun-behind-small-cloud.png"
                 alt="mostly cloudy"
-                width="50"
+                width="70"
               />
               <span className="temp-result">6 </span>
 
