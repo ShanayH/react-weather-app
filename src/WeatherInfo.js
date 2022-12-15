@@ -4,6 +4,7 @@ import FormattedDate from "./FormattedDate";
 export default function WeatherInfo(props) {
   return (
     <div className="Info">
+      <h1> {props.data.city}</h1>
       <div className="row">
         <div className="col-6">
           <h1 className="city-result text-capitalize">{props.defaultCity} </h1>
@@ -32,12 +33,7 @@ export default function WeatherInfo(props) {
                 {Math.round(props.data.temperature)}{" "}
               </span>
 
-              <span className="units">
-                <a href="#" className="active">
-                  °C {""}
-                </a>
-                <a href="#">°F</a>
-              </span>
+              <span className="units">C F</span>
             </li>
           </ul>
         </div>
