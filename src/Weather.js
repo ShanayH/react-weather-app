@@ -52,7 +52,7 @@ export default function Weather(props) {
             className="search-bar"
             onChange={searchForCity}
           />
-          <input type="submit" value="Search" classNamem="search-button" />
+          <input type="submit" value="Search" className="search-button" />
         </form>
         <WeatherInfo data={weatherData} />
       </div>
