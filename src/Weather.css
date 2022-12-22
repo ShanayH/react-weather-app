@@ -27,7 +27,15 @@
   position: relative;
   margin-left: 11px;
   top: -25px;
-  color: red;
+  color: black;
+}
+
+.Weather .units a {
+  font-size: 18px;
+  text-decoration: none;
+  position: relative;
+  margin-right: 4px;
+  color: blue;
 }
 
 .Weather ul {

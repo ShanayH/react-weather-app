@@ -30,7 +30,7 @@ export default function WeatherInfo(props) {
                 alt={props.data.description}
                 width="70"
               />
-              <TempConversion celsius={Math.round(props.data.temperature)} />
+              <TempConversion celsius={props.data.temperature} />
             </li>
           </ul>
         </div>
