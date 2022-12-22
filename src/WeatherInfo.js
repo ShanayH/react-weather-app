@@ -5,15 +5,13 @@ import TempConversion from "./TempConversion";
 export default function WeatherInfo(props) {
   return (
     <div className="Info">
-      <h1> {props.data.city}</h1>
       <div className="row">
         <div className="col-6">
-          <h1 className="city-result text-capitalize">{props.defaultCity} </h1>
+          <h1 className="city-result text-capitalize">{props.data.city} </h1>
         </div>
         <div className="col-6 date-time">
           <ul>
             <li>
-              {" "}
               <FormattedDate date={props.data.date} />
             </li>
             <li className="text-capitalize">{props.data.description}</li>

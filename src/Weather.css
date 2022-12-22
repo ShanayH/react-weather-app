@@ -8,10 +8,10 @@
   background: #f9f0f4;
 }
 
-.Weather .city-result {
+.Weather h1 {
   font-size: 2.5rem;
-  margin: 25px 25px;
-  color: black;
+  margin: 25px 25px 0px 50px;
+  color: red;
 }
 
 .Weather .temp-result {
@@ -23,6 +23,7 @@
 
 .Weather .units {
   font-size: 18px;
+  font-weight: bold;
   text-decoration: none;
   position: relative;
   margin-left: 11px;
@@ -32,6 +33,7 @@
 
 .Weather .units a {
   font-size: 18px;
+  font-weight: normal;
   text-decoration: none;
   position: relative;
   margin-right: 4px;
