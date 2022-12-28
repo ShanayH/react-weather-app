@@ -41,7 +41,11 @@ export default function WeatherInfo(props) {
           </ul>
         </div>
       </div>
-      <Forecast />
+      <Forecast
+        icon={props.data.iconUrl}
+        alt={props.data.description}
+        // coords={props.data.coordinates}
+      />
     </div>
   );
 }
