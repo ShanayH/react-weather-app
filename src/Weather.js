@@ -23,15 +23,15 @@ export default function Weather(props) {
 
   function submitForm(event) {
     event.preventDefault();
-    console.log(props.defaultCity);
     search();
   }
 
-  function searchForCity(event) {
+  function searchForCity(event) { 
     setCity(event.target.value);
   }
 
   function search() {
+    // let apiKey = "502dc8f7ae36e57af1974e18d16a86f8";
     let apiKey = `2f4a61b0876133218968273ba29696cf`;
     let units = `metric`;
 
