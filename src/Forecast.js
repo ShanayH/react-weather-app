@@ -2,14 +2,15 @@ import React, { useState, useEffect } from "react";
 import "./Forecast.css";
 // import ForecastDate from "./ForecastDate";
 import axios from "axios";
+import ForecastDay from "./ForecastDay";
 
 export default function Forecast(props) {
   let [loaded, setLoaded] = useState(false);
   let [forecast, setForecast] = useState(null);
 
-  useEffect(() => {
-    setLoaded(false);
-  }, [props.coordinates]);
+  // useEffect(() => {
+  //   setLoaded(false);
+  // }, [props.coordinates]);
 
   function handleResponse(response) {
     setForecast(response);
@@ -17,26 +18,12 @@ export default function Forecast(props) {
   }
 
   if (loaded) {
-    console.log(forecast.data.list[0].main.temp_max);
+    // console.log(forecast);
     return (
       <div className="forecast">
         <div className="row">
           <div className="col-2">
-            <div className="forecast-day">{forecast.data.list[0].dt}</div>
-            {/* <img
-              src="http://openweathermap.org/img/wn/${response.data.list[0]weather.icon}@2x.png"
-              alt="loading"
-            /> */}
-
-            {/* <img src={forecast.data.list[0].weather.icon} alt={forecast.data.list[0].weather.description } /> */}
-            <div className="forecast-temps">
-              <span className="forecast-temp-min">
-                {Math.round(forecast.data.list[2].main.temp_min)}°
-              </span>
-              <span className="forecast-temp-max">
-                {Math.round(forecast.data.list[2].main.temp_max)}°
-              </span>
-            </div>
+            <ForecastDay info={forecast} />
           </div>
         </div>
       </div>
