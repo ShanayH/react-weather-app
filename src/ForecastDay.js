@@ -13,14 +13,15 @@ export default function ForecastDay(props) {
 
   function day() {
     let date = new Date(props.info.data.list[0].dt * 1000);
-    let day = date.getDay(); 
+    let day = date.getDay();
 
-    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat",]
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
     return days[day];
   }
-
+console.log(props.info.data.list[0].main.temp_max);
   return (
+    
     <div className="forecastDay">
       <div className="forecast-day">{day()}</div>
       <img
