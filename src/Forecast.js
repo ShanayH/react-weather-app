@@ -13,32 +13,24 @@ export default function Forecast(props) {
   }, [props.coords]);
 
   function handleResponse(response) {
+    // console.log(response.data.list[0]);
     setForecast(response);
     setLoaded(true);
   }
 
   if (loaded) {
-    console.log(props.coords);
-    console.log(forecast.data.list[0].main.temp_max);
+    // console.log(props.coords);
 
     return (
       <div className="forecast">
         <div className="row">
-          <div className="col">
-            <ForecastDay info={forecast} />
-          </div>
-          <div className="col">
-            <ForecastDay info={forecast} />
-          </div>
-          <div className="col">
-            <ForecastDay info={forecast} />
-          </div>
-          <div className="col">
-            <ForecastDay info={forecast} />
-          </div>
-          <div className="col">
-            <ForecastDay info={forecast} />
-          </div>
+          {forecast.map(function (dailyForecast, index) {
+            return (
+              <div className="col" key={index}>
+                <ForecastDay info={dailyForecast} />
+              </div>
+            );
+          })}
         </div>
       </div>
     );

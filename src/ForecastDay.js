@@ -19,9 +19,8 @@ export default function ForecastDay(props) {
 
     return days[day];
   }
-console.log(props.info.data.list[0].main.temp_max);
+
   return (
-    
     <div className="forecastDay">
       <div className="forecast-day">{day()}</div>
       <img
