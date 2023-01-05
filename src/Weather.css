@@ -49,6 +49,9 @@
   line-height: 22px;
   font-size: 20px;
 }
+.Weather .weather-description {
+  margin: 8px 0px 0px 3px;
+}
 
 .Weather .weather-info {
   line-height: 22px;
@@ -63,6 +66,5 @@
 }
 
 .Weather canvas {
-  margin-top:7px;
-  
+  margin-top: 7px;
 }
