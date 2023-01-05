@@ -14,22 +14,22 @@ export default function Forecast(props) {
 
   function handleResponse(response) {
     // console.log(response.data.list[0]);
-    setForecast(response);
+    setForecast(response.data.daily);
     setLoaded(true);
   }
 
   if (loaded) {
-    // console.log(props.coords);
-
     return (
       <div className="forecast">
         <div className="row">
           {forecast.map(function (dailyForecast, index) {
-            return (
-              <div className="col" key={index}>
-                <ForecastDay info={dailyForecast} />
-              </div>
-            );
+            if (index < 6) {
+              return (
+                <div className="col" key={index}>
+                  <ForecastDay info={dailyForecast} />
+                </div>
+              );
+            }
           })}
         </div>
       </div>
@@ -38,18 +38,10 @@ export default function Forecast(props) {
     let apiKey = "2f4a61b0876133218968273ba29696cf";
     let lat = props.coords.lat;
     let lon = props.coords.lon;
-    let units = `metric`;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
-
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
-
     return null;
   }
 }
-
-// when you open the page it runs the entire code 6x - the number of letters in Dublin
-// when you type in the city name into the search, it runs the code 1x per letter *returns the results of the default city*
-// then when you hit search, it runs the code again *returns the result of the searched city*.
-// it also runs it 1x per letter of the new city you have typed.
 
 // https://api.openweathermap.org/data/2.5/forecast?lat=54.5&lon=5.9&appid=2f4a61b0876133218968273ba29696cf&units=metric

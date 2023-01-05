@@ -2,17 +2,17 @@ import React from "react";
 
 export default function ForecastDay(props) {
   function minTemp() {
-    let temperature = Math.round(props.info.data.list[0].main.temp_min);
+    let temperature = Math.round(props.info.temp.min);
     return `${temperature}°`;
   }
 
   function maxTemp() {
-    let temperature = Math.round(props.info.data.list[0].main.temp_max);
+    let temperature = Math.round(props.info.temp.max);
     return `${temperature}°`;
   }
 
   function day() {
-    let date = new Date(props.info.data.list[0].dt * 1000);
+    let date = new Date(props.info.dt * 1000);
     let day = date.getDay();
 
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -26,7 +26,7 @@ export default function ForecastDay(props) {
       <img
         src="http://openweathermap.org/img/wn/10d@2x.png"
         // src="http://openweathermap.org/img/wn/(${props.info.data.list[0].weather[0].icon})@2x.png"
-        alt={props.info.data.list[0].weather[0].main}
+        alt={props.info.weather[0].description}
         width={44}
       />
       <div className="forecast-temps">
