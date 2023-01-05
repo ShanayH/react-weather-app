@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import "./Forecast.css";
 // import ForecastDate from "./ForecastDate";
 import axios from "axios";
@@ -19,9 +20,12 @@ export default function Forecast(props) {
   }
 
   if (loaded) {
+    // console.log(forecast[0].weather[0].icon);
     return (
       <div className="forecast">
         <div className="row">
+         
+         {/* <img src={forecast[0].weather[0].icon} /> */}
           {forecast.map(function (dailyForecast, index) {
             if (index < 6) {
               return (

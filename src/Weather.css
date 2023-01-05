@@ -61,3 +61,8 @@
 .Weather img {
   vertical-align: top;
 }
+
+.Weather canvas {
+  margin-top:7px;
+  
+}
