@@ -24,8 +24,6 @@ export default function Forecast(props) {
     return (
       <div className="forecast">
         <div className="row">
-         
-         {/* <img src={forecast[0].weather[0].icon} /> */}
           {forecast.map(function (dailyForecast, index) {
             if (index < 6) {
               return (
@@ -33,6 +31,8 @@ export default function Forecast(props) {
                   <ForecastDay info={dailyForecast} />
                 </div>
               );
+            } else {
+              return null;
             }
           })}
         </div>
